@@ -7,7 +7,22 @@ import { errorMiddleware, notFound } from './middleware/errorMiddleware'
 
 const app = express()
 
-app.use(cors({ origin: process.env.CLIENT_URL ?? '*', credentials: true }))
+const defaultAllowedOrigins = [
+  'http://localhost:5174',
+  'https://leavemanagementsystemfrontend-o8gqpqamn.vercel.app',
+]
+
+const allowedOrigins = [
+  ...defaultAllowedOrigins,
+  ...(process.env.CLIENT_URL?.split(',').map((origin) => origin.trim()).filter(Boolean) ?? []),
+]
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  }),
+)
 app.use(express.json({ limit: '1mb' }))
 
 app.get('/api/health', (_req, res) => {
