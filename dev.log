@@ -1,8 +1,0 @@
-
-> server@1.0.0 dev
-> ts-node-dev --respawn --transpile-only src/server.ts
-
-[INFO] 11:53:00 ts-node-dev ver. 2.0.0 (using ts-node ver. 10.9.2, typescript ver. 6.0.2)
-[INFO] 12:43:16 Restarting: C:\Users\ragul\Pictures\FULL STACK PROJECT\LeaveManagementSystem\server\src\models\User.ts has been modified
-[INFO] 12:44:13 Restarting: C:\Users\ragul\Pictures\FULL STACK PROJECT\LeaveManagementSystem\server\src\app.ts has been modified
-[INFO] 13:10:35 Restarting: C:\Users\ragul\Pictures\FULL STACK PROJECT\LeaveManagementSystem\server\src\[INFO] 13:10:35 Restarting: C:\Users\ragul\Pictures\FULL STACK PROJECT\LeaveManagementSystem\server\src\config\db.ts has been modified
